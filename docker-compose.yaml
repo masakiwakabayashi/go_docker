@@ -6,11 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - PORT
+      - PORT=8080
     container_name: myapp
     stdin_open: true
     tty: true
     volumes:
       - .:/go/src/app
     ports:
-      - ${PORT}:${PORT}
+      - 8080:8080
